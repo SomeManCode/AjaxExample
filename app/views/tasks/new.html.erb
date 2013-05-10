@@ -1,0 +1,21 @@
+<h3>New Task</h3>
+
+<%= form_for Task.new, :remote => true do |f| %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :priority %>
+    <%= f.number_field :priority %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
