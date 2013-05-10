@@ -8,6 +8,9 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.create(params[:task])
+
+    render :template => 'tasks/cool_bananas'
+
   end
 
 end
